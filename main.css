@@ -1,0 +1,259 @@
+
+@font-face {
+  font-family: "Varta";
+  src: url('assets/Varta-Regular.ttf');
+}
+
+
+@font-face {
+  font-family: "VartaBold";
+  src: url('assets/Varta-Bold.ttf');
+}
+
+@font-face {
+  font-family: "VartaSemiBold";
+  src: url('assets/Varta-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: "DeliciousHandrawn-Regular";
+  src: url('assets/DeliciousHandrawn-Regular.ttf');
+}
+
+
+body {
+    margin: 0 auto;
+    padding: 0!important;
+    font-family: 'Varta', sans-serif;
+    background-color: #e0f7ff;
+}
+
+
+.main-container {
+  min-height: 90vh;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.main {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+
+.content {
+  line-height: 1.5;
+  font-size: 1.1rem;
+  flex: 1;
+}
+
+.xoxo {
+  font-family: "DeliciousHandrawn-Regular", sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  background-color: #1b3e5f;
+  color: #f3ff03;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+.xoxo a {
+  text-decoration: none;
+  color: #f3ff03;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #1b3e5f;
+  flex-wrap: wrap;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 0.5rem;
+  padding: 0.25rem 0;
+  font-family: "VartaBold", sans-serif;
+}
+
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+input {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #1b3e5f;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 0.125rem;
+  transition: all 0.3s;
+  width: 50%;
+}
+
+button:hover {
+  background-color: #102940;
+  transform: translateY(-1px);
+}
+
+.header {
+  background-color: #fff!important;
+  min-height: 60px;
+  padding-top: 28px;
+}
+
+.header-inner a {
+  text-decoration: none;
+  color: #000;
+}
+
+.header-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 2rem;
+}
+
+.title {
+  border: 3px #000 solid;
+  padding-left: 12px;
+  padding-right: 12px;
+  display: inline;
+  padding-top: 8px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: 'VartaBold', sans-serif;
+}
+
+.title span {
+  border-left: 3px #000 solid;
+  height: 100%;
+  padding-left: 12px;
+  margin-left: 6px;
+  padding-top: 8px;
+
+}
+
+h1{
+  margin: 0;
+  margin-top: 1rem;
+}
+
+h2 {
+  margin: 0;
+  margin-top: 1.3rem;
+  margin-bottom: 0rem;
+  font-size: 1.2rem;
+  line-height: 1.3rem;
+  font-family: 'VartaSemiBold', sans-serif;
+}
+
+hr {
+  margin-top: 2rem;
+  border: solid 1px #000;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+    max-width: 800px;
+}
+
+.hero-wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+    max-width: 768px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.hero {
+  padding: 1rem;
+  background-color: #1b3e5f;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+
+.hero .description {
+    padding: 1rem;
+    font-size: 1.125rem;
+    line-height: 2rem;
+    margin-top: 1rem;
+    background-color: #fff;
+    color: #1b3e5f;
+    display: inline-block;
+    font-family: 'VartaBold', sans-serif;
+    vertical-align: middle;
+    padding-top: 0.3rem;
+    padding-bottom: 0rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+}
+
+.hero .counter {
+    margin-top: 1rem;
+    background-color: #f3ff00;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #1b3e5f;
+    display: inline-block;
+    font-family: 'VartaBold', sans-serif;
+    vertical-align: middle;
+    padding-top: 0.7rem;
+    padding-bottom: 0rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+}
+
+
+@media screen and (max-width: 600px) {
+  .main {
+    padding: 1rem 1rem;
+  }
+  .header-inner {
+   padding-left: 1rem;
+  }
+
+  .image-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-container img {
+    width: 100%;
+  }
+
+}
